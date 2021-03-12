@@ -58,7 +58,6 @@ function addVideoStream(video, stream) {
 	videoGrid.append(video);
 }
 function connectToNewUser(userId, stream) {
-	// console.log("someone on front connected", userId);
 	const call = myPeer.call(userId, stream);
 	const video = document.createElement("video");
 	call.on("stream", (userVideoStream) => {
